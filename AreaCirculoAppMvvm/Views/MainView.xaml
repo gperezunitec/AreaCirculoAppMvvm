@@ -3,7 +3,20 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AreaCirculoAppMvvm.Views.MainView">
-    <ContentPage.Content>
+    <VerticalStackLayout>
         
-    </ContentPage.Content>
+        
+        <Label Text="Ingrese el Radio del Circulo: "></Label>
+        <Entry Text="{Binding A}" Keyboard="Numeric"></Entry>
+        
+        
+        <Label Text="Resultado: "></Label>
+        <Entry Text="{Binding C}" IsReadOnly="True" ></Entry>
+        
+        <Button Text="Calcular" Background="Green" Command="{Binding SumarCommand}"></Button>
+        <Button Text="Limpiar" Background="Red" Command="{Binding LimpiarCommand}"></Button>
+        
+        
+        
+    </VerticalStackLayout>
 </ContentPage>
