@@ -2,18 +2,20 @@
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:AreaCirculoAppMvvm.ViewModels"
+             x:DataType="viewmodel:MainViewModels"
              x:Class="AreaCirculoAppMvvm.Views.MainView">
     <VerticalStackLayout>
         
         
         <Label Text="Ingrese el Radio del Circulo: "></Label>
-        <Entry Text="{Binding A}" Keyboard="Numeric"></Entry>
+        <Entry Text="{Binding Radio}" Keyboard="Numeric"></Entry>
         
         
         <Label Text="Resultado: "></Label>
-        <Entry Text="{Binding C}" IsReadOnly="True" ></Entry>
+        <Entry Text="{Binding Area }" IsReadOnly="True" ></Entry>
         
-        <Button Text="Calcular" Background="Green" Command="{Binding SumarCommand}"></Button>
+        <Button Text="Calcular" Background="Green" Command="{Binding CalcularCommand}"></Button>
         <Button Text="Limpiar" Background="Red" Command="{Binding LimpiarCommand}"></Button>
         
         
